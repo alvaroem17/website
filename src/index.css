@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-customOrange: #ff784b;
+  --color-backgroundGray: #e5e7eb;
+}
