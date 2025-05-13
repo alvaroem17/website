@@ -5,7 +5,7 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors">
       <Navbar />
-      <main className="p-6">
+      <main>
         <Outlet />
       </main>
     </div>

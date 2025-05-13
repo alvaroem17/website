@@ -10,7 +10,7 @@ const Navbar = () => {
           <Link to="/projects" className="hover:underline">Proyectos</Link>
           <Link to="/about" className="hover:underline">Sobre mi</Link>
         </div>
-        <img src="./logo-elegido-2-final.png" alt="logo" className='h-full'/>
+        <Link to="/" className='h-20'><img src="./logo-elegido-2-final.png" alt="logo" className='h-20'/></Link>
         <div className="space-x-4">
           <Link to="/contact" className="hover:underline">Contacto</Link>
           <ThemeToggle />
