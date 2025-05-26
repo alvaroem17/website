@@ -1,31 +1,31 @@
 import { useEffect, useState } from 'react'
-import { getProjects, Project } from '../services/ProjectService'
+import { getSkills, Skill } from '../services/SkillsService'
 
-export function useProjects() {
-  const [projects, setProjects] = useState<Project[]>([])
+export function useSkills() {
+  const [skills, setSkills] = useState<Skill[]>([])
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchSkills = async () => {
       setLoading(true)
       setError(null)
       try {
-        const data = await getProjects()
-        setProjects(data)
+        const data = await getSkills()
+        setSkills(data)
       } catch (err: unknown) {
         if (err instanceof Error) {
           setError(err.message)
         } else {
-          setError('Error loading projects')
+          setError('Error loading skills')
         }
       } finally {
         setLoading(false)
       }
     }
 
-    fetchProjects()
+    fetchSkills()
   }, [])
 
-  return { projects, loading, error }
+  return { skills, loading, error }
 }
